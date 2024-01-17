@@ -9,9 +9,15 @@
         MaxHeight="520"
         x:Class="ProyectoDI2.MainWindow"
         Title="ProyectoDI2">
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <ImageBrush Source="Resources/majuelo.jpg"/>
+            </Setter>
+        </Style>
+    </Window.Styles>
     
-    <StackPanel Background='#f7f0f5'>
-        
+    <StackPanel>
         <StackPanel Background="#8f857d">
             <Label  Margin="5" FontSize="24" HorizontalAlignment="Center" Foreground="Black">Matricula IES El Majuelo</Label>
         </StackPanel>
@@ -53,7 +59,7 @@
             
             <StackPanel Grid.Column="1" Margin="50,15,0,0">
                 <Image VerticalAlignment="Center"  Name="pb" Stretch="Uniform" Height="200" Width="200"></Image>
-                <Label Name="registro" HorizontalAlignment="Center">Nº de registro: 1 </Label>
+                <Label Name="registro" HorizontalAlignment="Center" Foreground="White">Nº de registro: 1 </Label>
                 <!--Boton cargar-->
                 <Button Name="btcargarimg" Click="btcargarimg_Click" HorizontalAlignment="Center" Foreground="White" Background="#5c5552" BorderBrush="Black">Cargar</Button>
             </StackPanel>
@@ -80,9 +86,10 @@
             <!--Boton Guardar-->
             <Button Grid.Column="1" Name="btguardar" Click="btguardar_Click" HorizontalAlignment="Right" Foreground="White" Background="#5c5552" BorderBrush="Black">Guardar</Button>
             <!--Label Registro-->
-            <Label Grid.Column="2" Name="lblnregistros"  HorizontalAlignment="Center" Foreground="Black" BorderBrush="Black">Nº Registros: 0</Label>
+            <Label Grid.Column="2" Name="lblnregistros"  HorizontalAlignment="Center" Foreground="White" BorderBrush="Black">Nº Registros: 0</Label>
             <!--Boton Eliminar-->
             <Button Grid.Column="3" Name="bteliminar" Click="bteliminar_Click" HorizontalAlignment="Left" Foreground="White" Background="#5c5552" BorderBrush="Black">Eliminar</Button>
         </Grid>
+        
     </StackPanel>
 </Window>
